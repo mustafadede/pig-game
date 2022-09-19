@@ -12,7 +12,7 @@ const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
 const playerName0El = document.querySelector('#name--0');
 const playerName1El = document.querySelector('#name--1');
-
+const btnBack = document.querySelector('.btn--back');
 // username changes
 playerName0El.textContent = localStorage.getItem('player1');
 playerName1El.textContent = localStorage.getItem('player2');
@@ -94,3 +94,7 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init);
+
+btnBack.addEventListener('click', function () {
+  localStorage.clear();
+});
